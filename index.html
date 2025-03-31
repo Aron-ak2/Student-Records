@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROOKSIDE INTERNATIONAL UNIVERSITY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay loop muted id="background-video">
+        <source src="university-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <!-- School Logo & Title -->
+        <div class="header">
+            <img src="Uni-photo.jpeg" alt="School Logo" class="logo">
+            <h1>BROOKSIDE INTERNATIONAL UNIVERSITY</h1>
+        </div>
+
+        <!-- Search Input -->
+        <input type="text" id="search" placeholder="Search for a student..." onkeyup="searchData()">
+
+        <!--  Student Table -->
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Student Number</th>  
+                    <th>Name</th>
+                    <th>Admission Number</th>
+                    <th>Age</th>
+                    <th>Major</th>
+                    <th>Course ID</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be inserted here from Firebase -->
+            </tbody>
+        </table>
+
+        <p id="notFound" style="display: none; color: red;">No records found</p>
+    </div>
+
+    <!--Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
